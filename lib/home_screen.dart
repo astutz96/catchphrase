@@ -11,7 +11,21 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
-              Text('Welcome To Catchphrase!'),
+              Center(
+                child: ConstrainedBox(
+                  constraints: BoxConstraints(
+                    maxWidth: 200,
+                    maxHeight: 200,
+                  ),
+                  child: Text(
+                    'Welcome To Catchphrase!',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 26,
+                    ),
+                  ),
+                ),
+              ),
               Container(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,

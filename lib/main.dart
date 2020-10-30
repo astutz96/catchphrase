@@ -12,12 +12,22 @@ class MyApp extends StatelessWidget {
       home: HomeScreen(),
       title: 'Flutter Demo',
       theme: ThemeData.from(
-        colorScheme: ColorScheme.light(),
+        colorScheme: ColorScheme.light(
+          primary: Colors.orange,
+          primaryVariant: Colors.orangeAccent,
+          secondary: Colors.blue,
+          secondaryVariant:  Colors.blueAccent,
+          background: Colors.blueGrey,
+          brightness: Brightness.light,
+        ),
       ).copyWith(
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
             primary: Colors.grey,
             onSurface: Colors.grey,
+            textStyle: TextStyle(
+
+            )
             ),
         ),
       ),

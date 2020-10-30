@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:catchphrase/select_deck_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -48,7 +49,12 @@ class HomeScreen extends StatelessWidget {
                       ),
                       child: ElevatedButton(
                         child: Text('Select Deck'),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => SelectDeckScreen())
+                          );
+                        },
                       ),
                     ),
                   ],

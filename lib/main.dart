@@ -25,9 +25,6 @@ class MyApp extends StatelessWidget {
           style: ElevatedButton.styleFrom(
             primary: Colors.grey,
             onSurface: Colors.grey,
-            textStyle: TextStyle(
-
-            )
             ),
         ),
       ),

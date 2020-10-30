@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -10,22 +11,31 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text('Welcome To Catchphrase!'),
-              ),
+              Text('Welcome To Catchphrase!'),
               Container(
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
-                    RaisedButton(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text('Play'),
-                      onPressed: null,
+                    ConstrainedBox(
+                      constraints: BoxConstraints(
+                        minWidth: 150,
+                        minHeight: 85,
+                      ),
+                      child: ElevatedButton(
+                        child: Text('Play'),
+                        onPressed: () {},
+                      ),
                     ),
-                    RaisedButton(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text('Select Deck'),
-                      onPressed: null,
+                    SizedBox(height: 12.0,),
+                    ConstrainedBox(
+                      constraints: BoxConstraints(
+                        minWidth: 150,
+                        minHeight: 85,
+                      ),
+                      child: ElevatedButton(
+                        child: Text('Select Deck'),
+                        onPressed: () {},
+                      ),
                     ),
                   ],
                 ),

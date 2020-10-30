@@ -9,11 +9,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.orange,
-      ),
       home: HomeScreen(),
+      title: 'Flutter Demo',
+      theme: ThemeData.from(
+        colorScheme: ColorScheme.light(),
+      ).copyWith(
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            primary: Colors.grey,
+            onSurface: Colors.grey,
+            ),
+        ),
+      ),
+
     );
   }
 }

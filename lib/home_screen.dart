@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:catchphrase/select_deck_screen.dart';
+import 'package:flutter/painting.dart';
+import 'package:flutter/rendering.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -12,7 +14,30 @@ class HomeScreen extends StatelessWidget {
         elevation: 0,
       ),
       body: Container(
-
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <Widget>[
+            Expanded(
+              flex: 7,
+              child: Container(
+                color: Theme.of(context).colorScheme.background,
+              ),
+            ),
+            Expanded(
+              flex:  13,
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Theme.of(context).colorScheme.primary,
+                  borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(20),
+                    topLeft: Radius.circular(20),
+                  ),
+                  ),
+                ),
+              ),
+          ],
+        ),
       ),
     );
   }

@@ -46,9 +46,13 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - images/blue_text_bubble.png
-    - images/white_text_bubble.png
-    - images/word_jumble.png
+    - assets/images/blue_text_bubble.png
+    - assets/images/white_text_bubble.png
+    - assets/images/word_jumble.png
+    - assets/images/people.png
+    - assets/images/person_1.png
+    - assets/images/person_2.png
+    - assets/images/person_3.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

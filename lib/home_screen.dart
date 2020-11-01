@@ -7,7 +7,9 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.secondary,
+        primary:  false,
+        backgroundColor: Theme.of(context).colorScheme.background,
+        elevation: 0,
       ),
       body: Container(
 

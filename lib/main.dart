@@ -13,17 +13,20 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData.from(
         colorScheme: ColorScheme.light(
-          primary: Color(0xfff0aa1c),
-          primaryVariant: Color(0xffffae00),
-          secondary: Color(0xff112736),
-          secondaryVariant: Color(0xff0a2031),
-          background: Color(0xffeeebe6),
+          primary: Color(0xff003049),
+          primaryVariant: Color(0xff1b4960),
+          secondary: Color(0xfff77f00),
+          secondaryVariant: Color(0xfffcbf49),
+          background: Color(0xffeae2b7),
           brightness: Brightness.light,
         ),
       ).copyWith(
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            primary : Color(0xff647484),
+            primary : Color(0xffd62828),
+            textStyle: TextStyle(
+              color: Color(0xffffffff),
+            )
           )
         ),
       ),

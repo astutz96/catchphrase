@@ -50,7 +50,9 @@ flutter:
   assets:
     - assets/images/background_9_19.5.png
     - assets/images/background_9_16.png
-
+    - assets/homepage_background/background.png
+    - assets/homepage_background/2.5x/background.png
+    - assets/homepage_background/3.5x/background.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

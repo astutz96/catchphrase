@@ -1,3 +1,4 @@
+import 'package:catchphrase/select_deck_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
@@ -53,7 +54,7 @@ class HomePageButtons extends StatelessWidget {
                           letterSpacing: 3.0
                         ),
                       ),
-                      onPressed: () => {},
+                      onPressed: () {},
                     ),
                   ),
                 ),
@@ -75,7 +76,12 @@ class HomePageButtons extends StatelessWidget {
                             letterSpacing: 3.0
                         ),
                       ),
-                      onPressed: () => {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => SelectDeckScreen()),
+                        );
+                      },
                     ),
                   ),
                 ),

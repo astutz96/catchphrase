@@ -46,9 +46,11 @@ class HomePageButtons extends StatelessWidget {
                           borderRadius: BorderRadius.circular(18)
                         ),          
                       ),
-                      child: Text('Play',
+                      child: Text('PLAY',
                         style: TextStyle(
-                          fontSize: 24,
+                          fontFamily: 'Lato',
+                          fontSize: 22,
+                          letterSpacing: 3.0
                         ),
                       ),
                       onPressed: () => {},
@@ -66,9 +68,11 @@ class HomePageButtons extends StatelessWidget {
                             borderRadius: BorderRadius.circular(18)
                         ),
                       ),
-                      child: Text('Select Deck',
+                      child: Text('SELECT DECK',
                         style: TextStyle(
-                            fontSize: 24,
+                            fontFamily: 'Lato',
+                            fontSize: 22,
+                            letterSpacing: 3.0
                         ),
                       ),
                       onPressed: () => {},

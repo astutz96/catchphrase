@@ -90,11 +90,8 @@ class HomePageButtons extends StatelessWidget {
                           style: ElevatedButton.styleFrom(
                             shape: CircleBorder()
                           ),
-                          onPressed: () => {},
-                        ),
-                        ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                              shape: CircleBorder()
+                          child: Icon(
+                            Icons.settings
                           ),
                           onPressed: () => {},
                         ),
@@ -102,11 +99,29 @@ class HomePageButtons extends StatelessWidget {
                           style: ElevatedButton.styleFrom(
                               shape: CircleBorder()
                           ),
+                          child: Icon(
+                              Icons.help_outline
+                          ),
                           onPressed: () => {},
                         ),
                         ElevatedButton(
                           style: ElevatedButton.styleFrom(
                               shape: CircleBorder()
+                          ),
+                          child: Icon(
+                              Icons.add
+                          ),
+                          onPressed: () => {},
+                        ),
+                        ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              shape: CircleBorder()
+                          ),
+                          child: Text('PRO',
+                            style: TextStyle(
+                                fontFamily: 'Lato',
+                                fontWeight: FontWeight.bold,
+                            ),
                           ),
                           onPressed: () => {},
                         ),

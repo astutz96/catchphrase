@@ -17,10 +17,10 @@ class SelectDeckScreen extends StatelessWidget {
       body: Container(
           child: ListView(
             children: <Widget>[
-              DeckCardRow(),
-              DeckCardRow(),
-              DeckCardRow(),
-              DeckCardRow(),
+              DeckCardRow(DeckCard('Everything'), DeckCard('Technology')),
+              DeckCardRow(DeckCard('Entertainment'), DeckCard('Sports')),
+              DeckCardRow(DeckCard('Transportation'), DeckCard('Home')),
+              DeckCardRow(DeckCard('Food / Drink'), DeckCard('Animals')),
             ],
           ),
       ),
@@ -29,6 +29,10 @@ class SelectDeckScreen extends StatelessWidget {
 }
 
 class DeckCardRow extends StatelessWidget {
+  final DeckCard card1;
+  final DeckCard card2;
+  DeckCardRow(this.card1, this.card2);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -39,13 +43,13 @@ class DeckCardRow extends StatelessWidget {
           Expanded(
               child: Container(
                 padding: EdgeInsets.all(10),
-                  child: DeckCard(),
+                  child: card1,
               ),
           ),
           Expanded(
             child: Container(
               padding: EdgeInsets.all(10),
-              child: DeckCard(),
+              child: card2,
             ),
           ),
         ],
@@ -56,6 +60,10 @@ class DeckCardRow extends StatelessWidget {
 
 
 class DeckCard extends StatelessWidget {
+
+  final String name;
+  DeckCard(this.name);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -82,15 +90,18 @@ class DeckCard extends StatelessWidget {
           Expanded(
             flex: 1,
             child: Center(
-              child: FittedBox(
-                fit: BoxFit.contain,
-                child: Text(
-                  'ANIMALS',
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontFamily: 'Lato',
-                      fontSize: 22.0,
-                      letterSpacing: 2.0
+              child: Container(
+                padding: EdgeInsets.all(5.0),
+                child: FittedBox(
+                  fit: BoxFit.contain,
+                  child: Text(
+                    name.toUpperCase(),
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontFamily: 'Lato',
+                        fontSize: 22.0,
+                        letterSpacing: 2.0
+                    ),
                   ),
                 ),
               ),

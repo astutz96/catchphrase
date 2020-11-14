@@ -14,19 +14,65 @@ class SelectDeckScreen extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-      body: Container(
-          child: ListView(
-            children: <Widget>[
-              DeckCardRow(DeckCard('Everything'), DeckCard('Technology')),
-              DeckCardRow(DeckCard('Entertainment'), DeckCard('Sports')),
-              DeckCardRow(DeckCard('Transportation'), DeckCard('Home')),
-              DeckCardRow(DeckCard('Food / Drink'), DeckCard('Animals')),
-            ],
-          ),
-      ),
+      body: DeckMenu([
+        'Everything',
+        'Technology',
+        'Entertainment',
+        'Sports',
+        'Transportation',
+        'Home',
+        'Food / Drink',
+      ]),
     );
   }
 }
+
+class DeckMenu extends StatefulWidget {
+
+  final List<String> names;
+  DeckMenu(this.names);
+
+  @override
+  _DeckMenuState createState() => _DeckMenuState();
+}
+
+class _DeckMenuState extends State<DeckMenu> {
+  @override
+  Widget build(BuildContext context) {
+    return _buildMenu(widget.names);
+  }
+
+  _buildMenu(List<String> names){
+    return ListView(
+      children: _buildRows(_buildCards(names)),
+    );
+  }
+
+  List<DeckCardRow> _buildRows(List<DeckCard> cards){
+    makeCardCountEven(cards);
+    List<DeckCardRow> cardRows = new List<DeckCardRow>();
+    for(var i = 0; i < cards.length; i = i+2){
+      cardRows.add(DeckCardRow(cards[i], cards[i+1]));
+    }
+    return cardRows;
+  }
+
+  List<DeckCard>_buildCards(List<String> names){
+    List<DeckCard> cards = new List<DeckCard>();
+    names.forEach((name) {
+      cards.add(DeckCard(name));
+    });
+    return cards;
+  }
+
+  void makeCardCountEven(List<DeckCard> cards) {
+    if (cards.length.isOdd){
+      cards.add(DeckCard(''));
+    }
+  }
+
+}
+
 
 class DeckCardRow extends StatelessWidget {
   final DeckCard card1;

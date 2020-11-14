@@ -22,6 +22,7 @@ class SelectDeckScreen extends StatelessWidget {
         'Transportation',
         'Home',
         'Food / Drink',
+        //'Animals',
       ]),
     );
   }
@@ -67,7 +68,7 @@ class _DeckMenuState extends State<DeckMenu> {
 
   void makeCardCountEven(List<DeckCard> cards) {
     if (cards.length.isOdd){
-      cards.add(DeckCard(''));
+      cards.add(DeckCard(' '));
     }
   }
 
